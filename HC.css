@@ -1,0 +1,89 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Neutral background */
+    color: #333;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #333, #555); /* Subtle gradient for a masculine feel */
+    color: #fff;
+    border-bottom: 5px solid #555; /* Bold bottom accent */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+/* Gallery Container */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Flexible grid */
+    gap: 25px; /* Larger gaps for more breathing space */
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px; /* Centered layout with max width */
+    list-style: none;
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-10px); /* Hover lift effect */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Image Styling */
+.gallery-item img {
+    width: 100%;
+    height: 300px; /* Consistent height for layout */
+    object-fit: cover; /* Crop to fit without distortion */
+    border-radius: 15px 15px 0 0; /* Rounded corners for the top */
+    display: block;
+}
+
+/* Caption Styling */
+figcaption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black for contrast */
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for readability */
+    z-index: 1;
+    transition: background 0.3s ease;
+}
+
+/* Hover Effect for Captions */
+.gallery-item:hover figcaption {
+    background: rgba(50, 50, 50, 0.9); /* Darker background on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjust for smaller screens */
+    }
+
+    .gallery-item img {
+        height: 200px; /* Smaller height for smaller screens */
+    }
+}
